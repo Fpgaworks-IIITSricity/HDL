@@ -1,0 +1,7 @@
+Running: xsim.dir/Receiver_RxD_behav/xsimk.exe -simmode gui -wdb Receiver_RxD_behav.wdb -simrunnum 0 -socket 50761
+Design successfully loaded
+Design Loading Memory Usage: 28652 KB (Peak: 28652 KB)
+Design Loading CPU Usage: 781 ms
+Simulation completed
+Simulation Memory Usage: 29540 KB (Peak: 29540 KB)
+Simulation CPU Usage: 921 ms
