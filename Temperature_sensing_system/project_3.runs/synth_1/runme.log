@@ -1,0 +1,304 @@
+
+*** Running vivado
+    with args -log temp_monitor.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source temp_monitor.tcl
+
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Fri May  9 13:34:35 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source temp_monitor.tcl -notrace
+WARNING: [Project 1-153] The current project device 'xc7a35ticpg236-1l' does not match with the device on the 'ALLABOUTFPGA.COM:EDGEA7:PART0:1.1' board part. A device change to match the device on 'ALLABOUTFPGA.COM:EDGEA7:PART0:1.1' board part is being done. Please upgrade the IP in the project via the upgrade_ip command or by selecting Reports => Reports IP Status.
+WARNING: [Ipconfig 75-871] Could not load NoC clock tree from device
+WARNING: [Ipconfig 75-570] Unable to create NoC or AIE Models.
+INFO: [Project 1-152] Project part set to artix7 (xc7a35tftg256-1)
+Command: read_checkpoint -auto_incremental -incremental C:/Users/ashiv/Downloads/project_3/project_3.srcs/utils_1/imports/synth_1/temp_monitor.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/ashiv/Downloads/project_3/project_3.srcs/utils_1/imports/synth_1/temp_monitor.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top temp_monitor -part xc7a35ticpg236-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Device 21-403] Loading part xc7a35ticpg236-1L
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19828
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1013.852 ; gain = 467.938
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6901] identifier 'send_trigger' is used before its declaration [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:67]
+INFO: [Synth 8-6157] synthesizing module 'temp_monitor' [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:1]
+INFO: [Synth 8-6157] synthesizing module 'XADC' [D:/Vivado/2024.2/scripts/rt/data/unisim_comp.v:154822]
+	Parameter INIT_40 bound to: 16'b0000000000000000 
+	Parameter INIT_41 bound to: 16'b0000000000000000 
+	Parameter INIT_42 bound to: 16'b0000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'XADC' (0#1) [D:/Vivado/2024.2/scripts/rt/data/unisim_comp.v:154822]
+WARNING: [Synth 8-7071] port 'BUSY' of module 'XADC' is unconnected for instance 'xadc_inst' [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:18]
+WARNING: [Synth 8-7071] port 'JTAGBUSY' of module 'XADC' is unconnected for instance 'xadc_inst' [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:18]
+WARNING: [Synth 8-7071] port 'JTAGLOCKED' of module 'XADC' is unconnected for instance 'xadc_inst' [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:18]
+WARNING: [Synth 8-7071] port 'JTAGMODIFIED' of module 'XADC' is unconnected for instance 'xadc_inst' [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:18]
+WARNING: [Synth 8-7071] port 'MUXADDR' of module 'XADC' is unconnected for instance 'xadc_inst' [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:18]
+WARNING: [Synth 8-7071] port 'CONVST' of module 'XADC' is unconnected for instance 'xadc_inst' [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:18]
+WARNING: [Synth 8-7071] port 'CONVSTCLK' of module 'XADC' is unconnected for instance 'xadc_inst' [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:18]
+WARNING: [Synth 8-7071] port 'VN' of module 'XADC' is unconnected for instance 'xadc_inst' [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:18]
+WARNING: [Synth 8-7071] port 'VP' of module 'XADC' is unconnected for instance 'xadc_inst' [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:18]
+WARNING: [Synth 8-7023] instance 'xadc_inst' of module 'XADC' has 24 connections declared, but only 15 given [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:18]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:118]
+INFO: [Synth 8-6155] done synthesizing module 'temp_monitor' (0#1) [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:1]
+WARNING: [Synth 8-6014] Unused sequential element current_char_reg was removed.  [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:101]
+WARNING: [Synth 8-7137] Register daddr_reg in module temp_monitor has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:23]
+WARNING: [Synth 8-7137] Register raw_data_reg in module temp_monitor has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:54]
+WARNING: [Synth 8-7137] Register tempC_reg in module temp_monitor has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:59]
+WARNING: [Synth 8-7137] Register digit_h_reg in module temp_monitor has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:64]
+WARNING: [Synth 8-7137] Register digit_t_reg in module temp_monitor has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:65]
+WARNING: [Synth 8-7137] Register digit_u_reg in module temp_monitor has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:66]
+WARNING: [Synth 8-7137] Register shift_reg_reg in module temp_monitor has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:102]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1119.867 ; gain = 573.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1119.867 ; gain = 573.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1119.867 ; gain = 573.953
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1119.867 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ashiv/Downloads/project_3/project_3.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/ashiv/Downloads/project_3/project_3.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ashiv/Downloads/project_3/project_3.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/temp_monitor_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/temp_monitor_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1213.117 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1213.117 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1213.117 ; gain = 667.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35ticpg236-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1213.117 ; gain = 667.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1213.117 ; gain = 667.203
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'temp_monitor'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               00
+                 iSTATE0 |                             0010 |                               01
+                 iSTATE1 |                             0100 |                               10
+                 iSTATE2 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'temp_monitor'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1213.117 ; gain = 667.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input   10 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 4     
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 14    
+	   4 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP tempC1, operation Mode is: A*(B:0x19).
+DSP Report: operator tempC1 is absorbed into DSP tempC1.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'send_trigger_reg/Q' [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:92]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:92]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ashiv/Downloads/project_3/project_3.srcs/sources_1/new/temp_monitor.v:92]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 1213.117 ; gain = 667.203
+---------------------------------------------------------------------------------
+ Sort Area is  tempC1_0 : 0 0 : 212 212 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|temp_monitor | A*(B:0x19)  | 12     | 5      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:51 . Memory (MB): peak = 1308.961 ; gain = 763.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:51 . Memory (MB): peak = 1308.961 ; gain = 763.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:51 . Memory (MB): peak = 1319.062 ; gain = 773.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:59 . Memory (MB): peak = 1535.559 ; gain = 989.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:59 . Memory (MB): peak = 1535.559 ; gain = 989.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:59 . Memory (MB): peak = 1535.559 ; gain = 989.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:01:00 . Memory (MB): peak = 1535.559 ; gain = 989.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:01:00 . Memory (MB): peak = 1535.559 ; gain = 989.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:01:00 . Memory (MB): peak = 1535.559 ; gain = 989.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     1|
+|3     |LUT3 |     1|
+|4     |LUT5 |     1|
+|5     |XADC |     1|
+|6     |FDCE |     4|
+|7     |FDPE |     1|
+|8     |IBUF |     2|
+|9     |OBUF |     1|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:01:00 . Memory (MB): peak = 1535.559 ; gain = 989.645
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 3 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:57 . Memory (MB): peak = 1535.559 ; gain = 896.395
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:01:00 . Memory (MB): peak = 1535.559 ; gain = 989.645
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1535.559 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1551.105 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 72d1261d
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 23 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:01:11 . Memory (MB): peak = 1551.105 ; gain = 1195.617
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1551.105 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ashiv/Downloads/project_3/project_3.runs/synth_1/temp_monitor.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file temp_monitor_utilization_synth.rpt -pb temp_monitor_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri May  9 13:35:55 2025...

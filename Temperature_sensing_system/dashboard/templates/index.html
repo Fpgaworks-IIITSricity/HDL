@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Temperature Monitor</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: sans-serif; text-align: center; }
+        canvas { max-width: 600px; margin: auto; }
+    </style>
+</head>
+<body>
+    <h1>🌡️ Temperature Dashboard</h1>
+    <p id="temp-val">Loading...</p>
+    <canvas id="tempChart"></canvas>
+
+    <script>
+        const ctx = document.getElementById('tempChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Temperature (°C)',
+                    data: [],
+                    borderColor: 'crimson',
+                    tension: 0.2
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        min: 25,
+                        max: 40
+                    }
+                }
+            }
+        });
+
+        setInterval(async () => {
+            const res = await fetch('/temp');
+            const data = await res.json();
+            const t = data.temperature;
+            document.getElementById('temp-val').textContent = `Current: ${t} °C`;
+            const now = new Date().toLocaleTimeString();
+            chart.data.labels.push(now);
+            chart.data.datasets[0].data.push(t);
+            if (chart.data.labels.length > 20) {
+                chart.data.labels.shift();
+                chart.data.datasets[0].data.shift();
+            }
+            chart.update();
+        }, 1000);
+    </script>
+</body>
+</html>
