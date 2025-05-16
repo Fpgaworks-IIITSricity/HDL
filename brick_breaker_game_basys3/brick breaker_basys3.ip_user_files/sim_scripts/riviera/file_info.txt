@@ -1,0 +1,8 @@
+xpm_cdc.sv,systemverilog,xpm,../../../../../../../../Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="../../../brickbreaker_basys3.gen/sources_1/ip/clk_wiz_85"
+xpm_VCOMP.vhd,vhdl,xpm,../../../../../../../../Xilinx/Vivado/2024.2/data/ip/xpm/xpm_VCOMP.vhd,incdir="../../../brickbreaker_basys3.gen/sources_1/ip/clk_wiz_85"
+clk_wiz_85_clk_wiz.v,verilog,xil_defaultlib,../../../brick breaker_basys3.gen/sources_1/ip/clk_wiz_85/clk_wiz_85_clk_wiz.v,incdir="../../../brickbreaker_basys3.gen/sources_1/ip/clk_wiz_85"
+clk_wiz_85.v,verilog,xil_defaultlib,../../../brick breaker_basys3.gen/sources_1/ip/clk_wiz_85/clk_wiz_85.v,incdir="../../../brickbreaker_basys3.gen/sources_1/ip/clk_wiz_85"
+brick_breaker_game.v,verilog,xil_defaultlib,../../../../../../brick breaker_basys3/brick breaker_basys3.srcs/sources_1/new/brick_breaker_game.v,incdir="../../../brickbreaker_basys3.gen/sources_1/ip/clk_wiz_85"
+vga_controller.v,verilog,xil_defaultlib,../../../../../../brick breaker_basys3/brick breaker_basys3.srcs/sources_1/new/vga_controller.v,incdir="../../../brickbreaker_basys3.gen/sources_1/ip/clk_wiz_85"
+top.v,verilog,xil_defaultlib,../../../../../../brick breaker_basys3/brick breaker_basys3.srcs/sources_1/new/top.v,incdir="../../../brickbreaker_basys3.gen/sources_1/ip/clk_wiz_85"
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,87 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Fri May  9 10:28:20 2025
+| Host         : LAPTOP-8D55SVFB running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |     9 |
+|    Minimum number of control sets                        |     9 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    41 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |     9 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     5 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              33 |           13 |
+| No           | No                    | Yes                    |              11 |            4 |
+| No           | Yes                   | No                     |              90 |           42 |
+| Yes          | No                    | No                     |              10 |            4 |
+| Yes          | No                    | Yes                    |              11 |            5 |
+| Yes          | Yes                   | No                     |              20 |            8 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+-------------------------------+-----------------------------------------+------------------+----------------+--------------+
+|          Clock Signal         |         Enable Signal         |             Set/Reset Signal            | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------+-------------------------------+-----------------------------------------+------------------+----------------+--------------+
+|  vga_inst/E[0]                |                               |                                         |                4 |             10 |         2.50 |
+|  game_inst/paddle_clk_reg_n_0 | game_inst/paddle_x[9]_i_1_n_0 |                                         |                4 |             10 |         2.50 |
+|  clkgen/inst/clk_out1         |                               | rst_IBUF                                |                4 |             11 |         2.75 |
+|  clkgen/inst/clk_out1         | vga_inst/v_count[10]_i_1_n_0  | rst_IBUF                                |                5 |             11 |         2.20 |
+|  clkgen/inst/clk_out1         |                               | game_inst/paddle_clk_counter[0]_i_1_n_0 |                5 |             18 |         3.60 |
+|  clkgen/inst/clk_out1         |                               | game_inst/ball_clk_counter[0]_i_1_n_0   |                5 |             19 |         3.80 |
+|  ball_y_reg[9]_i_1_n_0        | game_inst/p_1_in              | rst_IBUF                                |                8 |             20 |         2.50 |
+|  clkgen/inst/clk_out1         |                               |                                         |                9 |             23 |         2.56 |
+|  ball_y_reg[9]_i_1_n_0        |                               | rst_IBUF                                |               32 |             53 |         1.66 |
++-------------------------------+-------------------------------+-----------------------------------------+------------------+----------------+--------------+
+
+
